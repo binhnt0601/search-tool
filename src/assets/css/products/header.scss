@@ -1,0 +1,22 @@
+$f-semibold: "Open-Sans-SemiBold";
+$f-bold: "Open-Sans-Bold";
+$f-regular: "Open-Sans-Regular";
+$f-light: "Open-Sans-Light";
+$c-color-gray: #2D3138;
+$c-color-blue: #04658B;
+$c-color-red: #D31427;
+$c-color-green: #078C70;
+$c-color-yellow: #A18716;
+
+#addAssetsPage {
+    .back-link {
+        font-family: $f-regular;
+        color: $c-color-blue;
+        img {
+            padding-bottom: 2px;
+        }
+        span {
+            padding-left: 8px;
+        }
+    }
+}
