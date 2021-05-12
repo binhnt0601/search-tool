@@ -8,7 +8,6 @@ $content-width: 1440px;
 /*-----------------------------
 # [Sizes Variable]
 ----------------------------- */
-$glutter: 10px;
 $breakpoint-lg: 1440px;
 $breakpoint-laptop: 1366px;
 $breakpoint-md: 1280px;
@@ -19,10 +18,3 @@ $breakpoint-mobile: 375px;
 $breakpoint-sm: 48em;
 $breakpoint-xs: 37em;
 $breakpoint-xxs: 30em;
-
-/*-----------------------------
-# [MIXIN]
------------------------------ */
-@mixin defaultBoxshadow() {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
-}
