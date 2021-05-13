@@ -49,6 +49,7 @@ export default {
       searchResult: [],
       categories: [],
       listData: [],
+      dataCategories: [],
       dataDefault: [],
       pageOfItems: [],
       activePage: 1,
@@ -73,7 +74,7 @@ export default {
       return (this.activePage - 1) * this.limit;
     },
     pages() {
-      const number = Math.ceil((this.selected ? this.listData.length : this.total) / this.limit);
+      const number = Math.ceil((this.selected ? this.dataCategories.length : this.total) / this.limit);
       let res = [];
       for (var i = 1; i <= number; i++) {
         res.push(i);
@@ -92,7 +93,7 @@ export default {
       handler(newVal) {
         if (newVal) {
           const newList = _.cloneDeep(this.dataDefault);
-          this.listData = newList.filter(el => el.brand === newVal);
+          this.dataCategories = newList.filter(el => el.brand === newVal);
           this.renderPagination();
         }
       }
@@ -118,7 +119,7 @@ export default {
         }
       } catch (error) {
         this.isLoading = false;
-        console.log(error);
+        console.log(error.response);
       }
     },
     
@@ -164,7 +165,7 @@ export default {
       }, 300);
     },
     renderPagination(numOfIndex) {
-      const defaultData = _.cloneDeep(this.selected ? this.listData : this.dataDefault);
+      const defaultData = _.cloneDeep(this.selected ? this.dataCategories : this.dataDefault);
       const pages = _.cloneDeep(this.pages);
       const page_size = pages.length;
       let newArr = [];
